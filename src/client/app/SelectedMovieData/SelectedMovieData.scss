@@ -1,13 +1,18 @@
 .movie_data_container {
-	margin: 20px 0px;
+	margin: 20px -15px;
+	height: inherit;
 	// float: left; 
 	.movie_img {
 		// display: inline-block;
 		// margin-right: 30px;
 		// float: left;
+		img {
+			width: 100%;
+		}
 	}
 	.movie_content {
 		// display: inline-block;
+		height: 100%;
 		.title, .movie_data {
 			border: 1px solid #333;
 		    background-color: #dedede;
@@ -19,8 +24,44 @@
 			margin-top: 0;
 		}
 		.movie_data {
+			height: calc(100% + 20px);
+			overflow-y: auto;
 			.inline-title, .inline-txt-block {
 				display: inline-block;
+				margin-right: 5px;
+			}
+			.overview-title {
+				text-decoration: underline;
+			}
+			hr {
+			    margin: 0px;
+			    border: 0;
+			    border-top: 1px solid #999;
+			}
+			a {
+				display: inline-block;
+    			padding-top: 5px;
+			}
+		}
+	}
+	@media only screen and (max-width: 492px) {
+		.movie_content {
+			padding-left: 0;
+			.title {
+				display: none;
+			}
+			.movie_data {
+				padding: 10px;
+				.overview-title {
+					display: none;
+				}
+				.inline-title {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+				hr {
+					display: none;
+				}
 			}
 		}
 	}

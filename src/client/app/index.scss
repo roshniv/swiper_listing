@@ -1,0 +1,9 @@
+.slick-slider {
+	height: 300px;
+	@media only screen and (max-width: 492px) {
+		height: 200px;
+	}
+	img {
+		height: 100%;
+	}
+}
