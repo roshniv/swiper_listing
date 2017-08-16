@@ -1,4 +1,4 @@
-Clone the Job Listing repo using following command "git clone https://github.com/roshniv/swiper_listing.git"
+Clone the Movie Listing repo using following command "git clone https://github.com/roshniv/swiper_listing.git"
 Change the directory to swiper_listing "cd swiper_listing"
 install all the dependencies "npm install"
 build the project "npm run build"
