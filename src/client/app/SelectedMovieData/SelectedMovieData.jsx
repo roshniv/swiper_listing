@@ -25,9 +25,9 @@ class SelectedMovieData extends React.Component {
         list.push(<a href={movie_Detail[key]}>Know more</a>);
           continue;
       }
-      list.push(<h5 className='inline-title'>{Utils.getTitle(key) + ':'}</h5>);
-      list.push(<p className='inline-txt-block'>{movie_Detail[key]}</p>);
-      list.push(<hr/>);
+      list.push(<h5 key={key +  '_title'} className='inline-title'>{Utils.getTitle(key) + ':'}</h5>);
+      list.push(<p key={key +  '_txt'} className='inline-txt-block'>{movie_Detail[key]}</p>);
+      list.push(<hr key={key +  '_hr'}/>);
     }
     return list;
   }

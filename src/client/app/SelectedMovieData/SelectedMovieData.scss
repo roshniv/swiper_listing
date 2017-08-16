@@ -1,11 +1,7 @@
 .movie_data_container {
 	margin: 20px -15px;
 	height: inherit;
-	// float: left; 
 	.movie_img {
-		// display: inline-block;
-		// margin-right: 30px;
-		// float: left;
 		img {
 			width: 100%;
 		}
@@ -22,7 +18,6 @@
 		margin-bottom: 14px;
 	}
 	.movie_content {
-		// display: inline-block;
 		height: 100%;
 		.movie_data {
 			height: calc(100% + 20px);

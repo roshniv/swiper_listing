@@ -9,7 +9,7 @@ class App extends React.Component {
 	constructor () {
 		super();
 		this.state = {
-	      movieData: null
+	      movieData: data.movies[0]
 	    };
 	}
 
@@ -21,10 +21,6 @@ class App extends React.Component {
 			titleHeight = titleHeight + 16;
 		}
 		document.getElementsByClassName('movie_data')[0].style.height = imageHeight - titleHeight;
-	}
-
-	componentWillMount() {
-		this.setState({movieData: data.movies});
 	}
 
 	componentDidMount() {
