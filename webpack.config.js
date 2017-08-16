@@ -11,6 +11,11 @@ var config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
+  node: {
+    fs: "empty",
+    net: "empty",
+    tls: "empty"
+  },
   module : {
     loaders : [
       {
@@ -26,6 +31,9 @@ var config = {
           fallback: "style-loader",
           use: "css-loader!sass-loader",
         })
+      },
+      { test: /\.json$/, 
+        loader: 'json-loader' 
       }
     ]
   },

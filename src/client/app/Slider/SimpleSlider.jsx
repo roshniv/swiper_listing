@@ -2,7 +2,6 @@ import './SimpleSlider.scss';
 import React from 'react';
 import Slider from 'react-slick';
 import AComponent from '../AComponent.jsx';
-import data from '../movies.json';
 
 
 class SimpleSlider extends React.Component {
@@ -13,12 +12,17 @@ class SimpleSlider extends React.Component {
     }
   }
   getSlides() {
-    var movies  = data.movies;
+    var movies  = this.state.sliderData.movies;
     var sliderList = [];
     for (var i=0; i<movies.length; i++) {
       sliderList.push(<div onClick={this.getIndex.bind(this, i)}><img src={movies[i]['Poster']} /></div>);
     }
     return sliderList;
+  }
+  componentWillMount() {
+    if (this.props.sliderData) {
+      this.setState({sliderData: this.props.sliderData});
+    }
   }
   render() {
     var settings = {

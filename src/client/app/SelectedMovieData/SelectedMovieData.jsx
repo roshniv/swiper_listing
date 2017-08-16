@@ -1,7 +1,6 @@
 import './SelectedMovieData.scss';
 import React from 'react';
 import Slider from 'react-slick';
-import data from '../movies.json';
 import Utils from '../utils.jsx';
 
 
@@ -37,6 +36,9 @@ class SelectedMovieData extends React.Component {
     var movie_Det = this.state.movieData;
     return (
       <div className='movie_data_container row'>
+          <div className='show-on-mobile'>
+            <h3 className='col-xs-12 title margin-left-right'>{movie_Det["Title"]}</h3>
+          </div>
           <div className='movie_img col-lg-4 col-sm-6 col-xs-6'>
             <img src={movie_Det["Poster"]} />
           </div>

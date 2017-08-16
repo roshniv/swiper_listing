@@ -10,19 +10,20 @@
 			width: 100%;
 		}
 	}
+	.title, .movie_data {
+		border: 1px solid #333;
+	    background-color: #dedede;
+	    // border-radius: 4px;
+	    padding: 20px 25px;
+	}
+	.title {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 14px;
+	}
 	.movie_content {
 		// display: inline-block;
 		height: 100%;
-		.title, .movie_data {
-			border: 1px solid #333;
-		    background-color: #dedede;
-		    // border-radius: 4px;
-		    padding: 20px 25px;
-		}
-		.title {
-			text-align: center;
-			margin-top: 0;
-		}
 		.movie_data {
 			height: calc(100% + 20px);
 			overflow-y: auto;
@@ -44,7 +45,18 @@
 			}
 		}
 	}
+	.show-on-mobile {
+		display: none;
+	}
+	.margin-left-right {
+		margin-left: 15px;
+		margin-right: 15px;
+		width: calc(100% - 30px);
+	}
 	@media only screen and (max-width: 492px) {
+		.show-on-mobile {
+			display: block;
+		}
 		.movie_content {
 			padding-left: 0;
 			.title {

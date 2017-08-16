@@ -1,4 +1,4 @@
-export default {
+{
     "movies": [
         {
             "Title": "The Jungle Book",
@@ -501,4 +501,4 @@ export default {
             "Website": "http://movies.disney.com/moana"
           }
         ]
-};
+}
